@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présention des formulaires{% endblock title %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets 'bundles/app/css/layout.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock stylesheets %}
+
+{% block body %}
+    <div class="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+{% endblock body %}
