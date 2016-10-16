@@ -1,0 +1,29 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block content %}
+    <table class="localities">
+        <thead>
+            <tr>
+                <th>Code Postal</th>
+                <th>Ville</th>
+                <th>
+                    <a href="{{ path('locality_add') }}">
+                        +
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for locality in localities %}
+            <tr>
+                <td>{{ locality.zip }}</td>
+                <td>{{ locality.city }}</td>
+                <td>
+                    <a href="{{ path('locality_edit', { 'id': locality.id }) }}">M</a>
+                    <a href="{{ path('locality_delete', { 'id': locality.id }) }}">-</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

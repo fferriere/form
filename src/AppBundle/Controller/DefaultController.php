@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 use AppBundle\FormEntity\LightPerson;
 use AppBundle\Form\LightPersonType;
+use AppBundle\FormEntity\Locality;
 
 class DefaultController extends Controller
 {

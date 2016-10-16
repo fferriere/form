@@ -1,0 +1,19 @@
+{% extends 'AppBundle:default:locality.html.twig' %}
+
+{% block title %}Localité - {{ parent() }}{% endblock title %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets 'bundles/app/css/light_person.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock stylesheets %}
+
+{% block content %}
+    {{ form(form) }}
+
+    <div class="locality">
+        <span class="zip">{{ locality.zip }}</span>
+        <span class="city">{{ locality.city }}</span>
+    </div>
+{% endblock content %}

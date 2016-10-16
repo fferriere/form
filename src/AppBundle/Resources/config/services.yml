@@ -1,0 +1,6 @@
+parameters:
+    app.repository.locality.class: Infrastructure/LocalityRepository
+
+services:
+    #app.repository.locality:
+    #    class: %app.repository.locality.class%
