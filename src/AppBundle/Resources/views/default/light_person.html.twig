@@ -1,0 +1,21 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}Light Person - {{ parent() }}{% endblock title %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets 'bundles/app/css/light_person.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock stylesheets %}
+
+{% block content %}
+    {{ form(form) }}
+
+    {% if person is defined %}
+        <div class="person">
+            <span class="last-name">{{ person.lastName }}</span>
+            <span class="first-name">{{ person.firstName }}</span>
+        </div class="person">
+    {% endif %}
+{% endblock content %}

@@ -1,0 +1,10 @@
+.person {
+    margin-top: 15px;
+}
+
+.person .last-name {
+    font-weight: bold;
+}
+.person .first-name {
+    font-style: italic;
+}
